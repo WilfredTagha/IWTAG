@@ -140,6 +140,7 @@ body {
 /* ═══════════════════════════════════
    NAVBAR
    ═══════════════════════════════════ */
+
 .navbar {
   position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
   z-index: 1000;
@@ -191,6 +192,116 @@ body {
 }
 .nav-cta:hover { opacity: 0.85; }
 
+/* Hamburger Button (Hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 2.5px;
+  background-color: var(--tx);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Active State (X shape) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu Dropdown */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  z-index: 999;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.mobile-menu-dropdown a {
+  padding: 14px 16px;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.mobile-menu-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-dropdown a:hover {
+  color: var(--ac);
+  background: var(--bg-card);
+  border-radius: 8px;
+}
+
+.mobile-menu-dropdown .mobile-cta {
+  background: var(--nav-cta-bg);
+  color: var(--nav-cta-tx);
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 8px;
+  border: none;
+}
+
+.mobile-menu-dropdown .mobile-cta:hover {
+  background: var(--ac);
+  color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .mobile-menu-dropdown {
+    display: flex;
+  }
+
+
+}
 /* ═══════════════════════════════════
    HERO
    ═══════════════════════════════════ */
