@@ -1,49 +1,43 @@
-import { Resend } from "resend";
+const { Resend } = require("resend");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
-  // Only allow POST requests
+module.exports = async function handler(req, res) {
+  // Only allow POST
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { name, email, service, message } = req.body;
+    const { name, email, service, message } = req.body || {};
 
     // Basic validation
     if (!name || !email || !message) {
-      return res.status(400).json({
-        error: "Name, email, and message are required.",
-      });
+      return res.status(400).json({ error: "Please fill all required fields." });
     }
 
-    // Send email to YOU
-    await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>", // temporary sender for testing
-      to: ["wilfred@mrdayter.com"], 
+    const data = await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: ["taghawilfred@gmail.com"], 
       subject: `New Portfolio Inquiry from ${name}`,
       reply_to: email,
       html: `
-        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2>New Portfolio Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Service Needed:</strong> ${service || "Not specified"}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message}</p>
-        </div>
+        <h2>New Client Inquiry</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Service:</strong> ${service || "Not specified"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
-    return res.status(200).json({
-      success: true,
-      message: "Message sent successfully!",
-    });
+    return res.status(200).json({ success: true, data });
   } catch (error) {
-    console.error("Resend error:", error);
+    console.error("RESEND FULL ERROR:", error);
+
     return res.status(500).json({
-      error: "Failed to send message. Please try again later.",
+      error: "Failed to send email",
+      details: error?.message || "Unknown error",
     });
   }
-}
+};
