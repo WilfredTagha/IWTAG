@@ -279,8 +279,12 @@ body {
   color: #fff;
 }
 
+.mobile-fab {
+  display: none;
+}
+
 /* Mobile Responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .hamburger {
     display: flex;
     order: 2;
@@ -301,7 +305,43 @@ body {
   }
 
 
+} */
+@media (max-width: 900px) {
+  /* Hide the full navbar pill entirely on mobile */
+  .navbar {
+    display: none;
+  }
+
+  /* Small floating hamburger button, anchored to top-right */
+  .mobile-fab {
+    display: flex;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .mobile-menu-dropdown {
+    display: flex;
+    top: 72px;
+    right: 16px;
+    left: unset;
+    transform: none;
+    width: 200px;
+  }
 }
+
+
 /* ═══════════════════════════════════
    HERO
    ═══════════════════════════════════ */
