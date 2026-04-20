@@ -26,9 +26,26 @@ export default function About({ dark }) {
               <div><div className="ct-lbl">Email :</div><div className="ct-val">wilfred@mrdayter.com</div></div>
             </div>
 
-            <div className="socials">
+            {/* <div className="socials">
               {["𝕏","in","Be","▲"].map((ic, i) => (
                 <a key={i} href="#" className="soc">{ic}</a>
+              ))}
+            </div> */}
+            <div className="socials">
+              {[
+                { icon: "in", url: "https://www.linkedin.com/in/TaghaWilfred", label: "LinkedIn" },
+                { icon: "f", url: "https://www.facebook.com/MrDayter", label: "Facebook" }
+              ].map((social, i) => (
+                <a 
+                  key={i} 
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="soc"
+                  title={social.label}
+                >
+                  {social.icon}
+                </a>
               ))}
             </div>
 
