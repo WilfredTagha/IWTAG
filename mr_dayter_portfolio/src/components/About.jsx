@@ -33,7 +33,7 @@ export default function About({ dark }) {
             </div> */}
             <div className="socials">
               {[
-                { icon: "in", url: "https://www.linkedin.com/in/wilfred-tagha", label: "LinkedIn" },
+                { icon: "in", url: "https://www.linkedin.com/in/wilfred-tagha/", label: "LinkedIn" },
                 { icon: "f", url: "https://www.facebook.com/MrDayter", label: "Facebook" }
               ].map((social, i) => (
                 <a 
