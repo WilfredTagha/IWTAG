@@ -32,7 +32,7 @@ export default function About({ dark }) {
               ))}
             </div>
 
-            <a href="#contact" className="btn-outline">MY STORY</a>
+            {/* <a href="#contact" className="btn-outline">MY STORY</a> */}
           </div>
 
           {/* Right — photo/logo card */}
