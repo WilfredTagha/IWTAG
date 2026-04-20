@@ -101,7 +101,7 @@ return (
           <div className="svc-visual-placeholder">
             <div className="wordmark">
               <LogoMark dark={dark} size={70} />
-              <div className="wm-mr">MR.</div>
+              <div className="wm-name" style={{ fontSize: 20 }}>MR.</div>
               <div className="wm-name" style={{ fontSize: 20 }}>DAYTER</div>
               <div className="wm-tag">Data · Analytics · AI</div>
             </div>
