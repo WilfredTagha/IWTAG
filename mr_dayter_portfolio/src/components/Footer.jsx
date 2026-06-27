@@ -18,7 +18,7 @@ export default function Footer({ dark }) {
           <div className="fw-tag">Where Data Meets Intelligence.</div>
         </div>
       </div>
-      <div className="footer-copy">© 2025 Wilfred Njeunwi Tagha · All rights reserved</div>
+      <div className="footer-copy">© 2024–2025 Wilfred Njeunwi Tagha · All rights reserved</div>
     </footer>
   );
 }

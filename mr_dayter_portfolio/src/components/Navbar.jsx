@@ -81,9 +81,9 @@ export default function Navbar({ dark }) {
         </div>
         <div className="nav-links">
           <a href="#home">Home</a>
+          <a href="#services">Services</a>
           <a href="#about">About</a>
-          <a href="#services">Projects</a>
-          <a href="#faq">Blogs</a>
+          <a href="#faq">FAQ</a>
         </div>
         <a href="#contact" className="nav-cta">Contact</a>
       </nav>
@@ -103,9 +103,9 @@ export default function Navbar({ dark }) {
       {menuOpen && (
         <div className="mobile-menu-dropdown">
           <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#services" onClick={closeMenu}>Services</a>
           <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#services" onClick={closeMenu}>Projects</a>
-          <a href="#faq" onClick={closeMenu}>Blogs</a>
+          <a href="#faq" onClick={closeMenu}>FAQ</a>
           <a href="#contact" className="mobile-cta" onClick={closeMenu}>Contact</a>
         </div>
       )}

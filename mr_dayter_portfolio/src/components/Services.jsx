@@ -2,10 +2,10 @@ import { useState } from "react";
 import LogoMark from "./LogoMark";
 
 const SVCS = [
-  { label: "1. DATA ENGINEERING",    items: ["ETL/ELT pipeline design & build", "Data warehouse architecture (Snowflake, BigQuery)", "Real-time streaming with Kafka & Spark", "Data quality frameworks & monitoring"] },
-  { label: "2. DATA ANALYTICS",      items: ["Dashboard design in Power BI & Tableau", "SQL & Python-based reporting", "KPI strategy and metric definition", "Self-service analytics enablement"] },
-  { label: "3. DATA STRATEGY",       items: ["Data maturity assessments", "Governance frameworks & data cataloging", "Cloud migration planning (AWS, GCP, Azure)", "Team upskilling & training"] },
-  { label: "4. AI & ML INTEGRATION", items: ["Feature engineering for ML models", "MLOps pipelines and model serving", "LLM integration and RAG systems", "Predictive analytics solutions"] },
+  { label: "1. DATA ENGINEERING",    items: ["ETL/ELT pipeline design & build", "Data warehouse schema design (PostgreSQL, BigQuery)", "Python automation — cleaning, restructuring, scheduling", "Data quality checks and pipeline monitoring"] },
+  { label: "2. DATA ANALYTICS",      items: ["Dashboard design in Power BI & Tableau", "SQL & Python-based reporting and analysis", "KPI definition and metric frameworks", "Academic & research data analysis (SPSS, Excel, Python)"] },
+  { label: "3. SOFTWARE & MOBILE",   items: ["Mobile app development with Flutter/Dart", "Backend APIs with Django and Python", "Web development (React, HTML, CSS, JavaScript)", "Full-stack information systems from scratch"] },
+  { label: "4. DATA STRATEGY",       items: ["Data maturity assessment for small teams", "Cloud setup and migration guidance (AWS)", "Reporting automation to replace manual workflows", "Training and upskilling for non-technical teams"] },
 ];
 
 const Chev = () => (

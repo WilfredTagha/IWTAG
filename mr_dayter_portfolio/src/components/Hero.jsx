@@ -39,7 +39,7 @@ export default function Hero({ dark }) {
         <div className="hero-right">
           <div className="hero-title">ENGINEER</div>
           <div className="hero-desc">
-            I'm a Cameroon-born data engineer and analyst, building intelligent pipelines and impactful data products.
+            I'm a Cameroon-born software engineer specialising in data engineering and analytics — building pipelines, automating reporting, and shipping data systems that work.
           </div>
         </div>
 

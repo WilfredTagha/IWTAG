@@ -12,13 +12,13 @@ export default function About({ dark }) {
             <h2 className="s-title">ABOUT ME</h2>
             <div className="abar"><div className="abar-1"/><div className="abar-2"/></div>
             <p className="s-desc">
-              Hi, I'm Wilfred — a data engineer and analyst passionate about building scalable data infrastructure and turning complex datasets into clear, actionable insights.
+              Hi, I'm Wilfred — a software engineer from Buea, Cameroon, specialising in data engineering and analytics. I build pipelines, automate reporting, and turn raw data into decisions that actually get made. BSc Software Engineering, University of Buea.
             </p>
 
             <div className="about-stats">
-              <div><div className="stat-num">5+</div><div className="stat-lbl">Years of Experience</div></div>
-              <div><div className="stat-num">30+</div><div className="stat-lbl">Completed Projects</div></div>
-              <div><div className="stat-num">15+</div><div className="stat-lbl">Clients Worldwide</div></div>
+              <div><div className="stat-num">3+</div><div className="stat-lbl">Years in Data & Engineering</div></div>
+              <div><div className="stat-num">80%</div><div className="stat-lbl">Reporting Time Reduced at SYNDATECH</div></div>
+              <div><div className="stat-num">5+</div><div className="stat-lbl">Systems Shipped</div></div>
             </div>
 
             <div className="about-contacts">
@@ -26,18 +26,14 @@ export default function About({ dark }) {
               <div><div className="ct-lbl">Email :</div><div className="ct-val">wilfred@mrdayter.com</div></div>
             </div>
 
-            {/* <div className="socials">
-              {["𝕏","in","Be","▲"].map((ic, i) => (
-                <a key={i} href="#" className="soc">{ic}</a>
-              ))}
-            </div> */}
             <div className="socials">
               {[
-                { icon: "in", url: "https://www.linkedin.com/in/wilfred-tagha/", label: "LinkedIn" },
-                { icon: "f", url: "https://www.facebook.com/MrDayter", label: "Facebook" }
+                { icon: "in", url: "https://www.linkedin.com/in/wilfredtagha", label: "LinkedIn" },
+                { icon: "f", url: "https://www.facebook.com/MrDayter", label: "Facebook" },
+                { icon: "gh", url: "https://github.com/tagha-wilfred", label: "GitHub" }
               ].map((social, i) => (
-                <a 
-                  key={i} 
+                <a
+                  key={i}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"

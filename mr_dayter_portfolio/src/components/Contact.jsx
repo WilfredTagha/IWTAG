@@ -62,7 +62,7 @@ export default function Contact({ dark }) {
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <div className="avail-pill" style={{ display: "inline-flex" }}>
             <div className="avail-dot" />
-            Available for work
+            Open to remote roles & freelance projects
           </div>
         </div>
 
@@ -96,8 +96,7 @@ export default function Contact({ dark }) {
               <div className="abar-2" />
             </div>
             <p className="s-desc" style={{ marginBottom: 28 }}>
-              Let's build something impactful together — whether it's your data
-              infrastructure, analytics stack, or your next big data product.
+              Whether it's a data pipeline, an analytics dashboard, a reporting automation, or a full data system — let's talk. I respond within 24 hours.
             </p>
 
             <form onSubmit={handleSubmit}>
