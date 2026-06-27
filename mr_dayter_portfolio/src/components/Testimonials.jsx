@@ -1,6 +1,6 @@
 const REVIEWS = [
   { text: "Wilfred automated our entire reporting workflow with a Python pipeline. What used to take our team half a day now runs in minutes. Highly recommended.", name: "Research Client",    role: "Data Analysis Project",   init: "RC" },
-  { text: "He built our mobile app from scratch during the Orange Summer Challenge. Clean architecture, good documentation, and delivered on time.", name: "Orange Cameroon Team", role: "Mobile Dev Internship",    init: "OC" },
+  { text: "He built a mobile app from scratch during the Orange Summer Challenge. Clean architecture, good documentation, and delivered on time.", name: "Orange Cameroon Team", role: "Mobile Dev Internship",    init: "OC" },
   { text: "Wilfred restructured our codebase and added new SMS features that let us control devices offline. Real engineering skills.", name: "UWACO Team",          role: "Software Engineer",       init: "UW" },
   { text: "He designed and ran a full database bootcamp for our community. Three out of four students graduated with real, working projects.", name: "I4G UBuea Chapter",  role: "Community Bootcamp Lead", init: "I4" },
 ];
