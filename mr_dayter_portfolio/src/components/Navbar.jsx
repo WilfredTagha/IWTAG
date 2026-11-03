@@ -17,7 +17,7 @@ export default function Navbar({ dark, isWhoAmI = false }) {
   const profileLinks = (
     <>
       <a href="/" onClick={closeMenu}>Portfolio</a>
-      <a href="#case" onClick={closeMenu}>The case</a>
+      <a href="#principles" onClick={closeMenu}>Principles</a>
       <a href="#record" onClick={closeMenu}>The record</a>
       <a href="#experience" onClick={closeMenu}>Experience</a>
     </>

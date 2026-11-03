@@ -1,7 +1,7 @@
 const commitments = [
-  { number: "01", title: "Verify the record", text: "I will examine the facts carefully, keep clear records, and separate evidence from assumption." },
-  { number: "02", title: "Explain what matters", text: "I will turn findings into plain, useful reports that the guild and council can understand and act on." },
-  { number: "03", title: "Protect the room", text: "Accountability should strengthen the institution. I will be firm on standards and constructive with people." },
+  { number: "01", title: "Verify the record", text: "I examine facts carefully, keep clear records and separate evidence from assumption." },
+  { number: "02", title: "Explain what matters", text: "I turn technical findings into clear information that people can understand and act on." },
+  { number: "03", title: "Strengthen the team", text: "I stay firm on standards while working constructively with the people responsible for the outcome." },
 ];
 
 const experience = [
@@ -44,14 +44,14 @@ export default function WhoAmI() {
       <section className="identity-hero" id="top">
         <div className="identity-hero-copy">
           <div className="identity-kicker">WHO_AM_I / WILFRED NJEUNWI TAGHA</div>
-          <p className="identity-campaign-label">Candidate for Auditor General</p>
-          <h1>Records that<br />tell the truth.</h1>
-          <p className="identity-lede">I am a software engineer, data analyst, educator and community leader. I am running for Auditor General because accountability should be visible in the work: careful records, clear reporting and follow-through.</p>
+          <p className="identity-campaign-label">Engineer / Analyst / Educator / Community Leader</p>
+          <h1>The work behind<br />the name.</h1>
+          <p className="identity-lede">I am a software engineer, data analyst, educator and community leader. This page brings together the work I have done, the people I have served and the principles that guide how I take responsibility.</p>
           <div className="identity-actions">
             <a className="identity-primary" href="/documents/Wilfred_Njeunwi_Tagha_CV.pdf" download>Download my CV <span aria-hidden="true">&#8595;</span></a>
             <a className="identity-secondary" href="#record">Explore my record</a>
           </div>
-          <div className="identity-tags" aria-label="Campaign tags"><span>#VoteWilfred4AuditorGeneral</span><span>#MrDayter</span><span>#AudiFred</span></div>
+          <div className="identity-tags" aria-label="Professional focus"><span>Data and software</span><span>Leadership</span><span>Community service</span></div>
         </div>
         <div className="identity-portrait-wrap">
           <div className="identity-portrait-index" aria-hidden="true">01</div>
@@ -60,20 +60,20 @@ export default function WhoAmI() {
         </div>
       </section>
 
-      <section className="identity-statement" id="case">
-        <div className="identity-section-label">THE CASE</div>
+      <section className="identity-statement" id="principles">
+        <div className="identity-section-label">HOW I WORK</div>
         <blockquote>“Trust is not demanded. It is demonstrated, line by line, entry by entry.”</blockquote>
         <div className="identity-statement-grid">
-          <p className="identity-statement-lead">Anyone can promise accountability. I want to show what it looks like in practice.</p>
+          <p className="identity-statement-lead">I prefer evidence that can be examined, work that can be explained and responsibility that can be traced.</p>
           <div className="identity-statement-body">
-            <p>It means holding the guild to its standards without tearing the room apart. It means understanding what students need, what the council needs and what the institution needs from the same set of facts.</p>
-            <p>It also means speaking clearly enough to prompt action. A report that nobody understands or acts on is only paperwork.</p>
+            <p>Whether I am building software, analysing data, teaching or representing a group, I start by listening and understanding the facts. I then organise the work so that other people can follow it.</p>
+            <p>I also believe information should lead to action. A report, dashboard or lesson has done its job only when it helps someone make a better decision.</p>
           </div>
         </div>
       </section>
 
       <section className="identity-section identity-commitments">
-        <div className="identity-section-head"><div className="identity-section-label">HOW I WILL SERVE</div><h2>Accountability people<br />can use.</h2></div>
+        <div className="identity-section-head"><div className="identity-section-label">WORKING PRINCIPLES</div><h2>Responsibility people<br />can trust.</h2></div>
         <div className="commitment-grid">
           {commitments.map((item) => <article className="commitment-card" key={item.number}><span className="commitment-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
         </div>
@@ -116,9 +116,9 @@ export default function WhoAmI() {
       </section>
 
       <section className="identity-close" id="contact">
-        <div className="identity-section-label">MY COMMITMENT</div>
-        <p className="identity-close-line">When you choose an Auditor General, choose someone prepared to carry the full weight of leadership.</p>
-        <h2>Vote Wilfred Njeunwi Tagha<br />for Auditor General.</h2>
+        <div className="identity-section-label">LET US CONNECT</div>
+        <p className="identity-close-line">If my experience fits a problem you are working on, I would be glad to hear about it.</p>
+        <h2>Let us build something<br />useful.</h2>
         <div className="identity-close-actions"><a href="mailto:wilfred@mrdayter.com">wilfred@mrdayter.com</a><a href="/documents/Wilfred_Njeunwi_Tagha_CV.pdf" target="_blank" rel="noreferrer">View CV</a><a href="/">Back to portfolio</a></div>
       </section>
     </main>
