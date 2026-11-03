@@ -1,112 +1,55 @@
-// import { useState } from "react";
-// import LogoMark from "./LogoMark";
-
-// export default function Navbar({ dark }) {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setMenuOpen(!menuOpen);
-//   };
-
-//   const closeMenu = () => {
-//     setMenuOpen(false);
-//   };
-
-//   return (
-//     <>
-//       <nav className="navbar">
-//         {/*
-//           Avatar disc:
-//           - Dark mode  → orange logo on dark disc (brand: orange circle on dark bg)
-//           - Light mode → blue logo on white disc  (brand: blue circle on white bg)
-//         */}
-//         <div className={`nav-avatar${dark ? " nav-avatar-dark" : ""}`}>
-//           {/* Replace with: <img src="/profile.jpg" alt="Mr. Dayter" /> */}
-//           <LogoMark dark={dark} size={34} />
-//         </div>
-
-//         {/* Desktop Navigation Links */}
-//         <div className="nav-links">
-//           <a href="#home">Home</a>
-//           <a href="#about">About</a>
-//           <a href="#services">Projects</a>
-//           <a href="#faq">Blogs</a>
-//         </div>
-
-//         {/* Mobile Hamburger Button */}
-//         <button 
-//           className={`hamburger${menuOpen ? " active" : ""}`}
-//           onClick={toggleMenu}
-//           aria-label="Toggle menu"
-//         >
-//           <span></span>
-//           <span></span>
-//           <span></span>
-//         </button>
-
-//         <a href="#contact" className="nav-cta">Contact</a>
-//       </nav>
-
-//       {/* Mobile Menu Dropdown */}
-//       {menuOpen && (
-//         <div className="mobile-menu-dropdown">
-//           <a href="#home" onClick={closeMenu}>Home</a>
-//           <a href="#about" onClick={closeMenu}>About</a>
-//           <a href="#services" onClick={closeMenu}>Projects</a>
-//           <a href="#faq" onClick={closeMenu}>Blogs</a>
-//           <a href="#contact" className="mobile-cta" onClick={closeMenu}>Contact</a>
-//         </div>
-//       )}
-//     </>
-//   );
-// }
-
-
-
 import { useState } from "react";
 import LogoMark from "./LogoMark";
 
-export default function Navbar({ dark }) {
+export default function Navbar({ dark, isWhoAmI = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+
+  const homeLinks = (
+    <>
+      <a href="#services" onClick={closeMenu}>Services</a>
+      <a href="#about" onClick={closeMenu}>About</a>
+      <a href="#testimonials" onClick={closeMenu}>Work</a>
+      <a href="/who_am_i" onClick={closeMenu}>Who am I</a>
+    </>
+  );
+
+  const profileLinks = (
+    <>
+      <a href="/" onClick={closeMenu}>Portfolio</a>
+      <a href="#case" onClick={closeMenu}>The case</a>
+      <a href="#record" onClick={closeMenu}>The record</a>
+      <a href="#experience" onClick={closeMenu}>Experience</a>
+    </>
+  );
 
   return (
     <>
-      {/* ── Desktop: full pill navbar ── */}
-      <nav className="navbar">
-        <div className={`nav-avatar${dark ? " nav-avatar-dark" : ""}`}>
+      <nav className="navbar" aria-label="Primary navigation">
+        <a href="/" className={`nav-avatar${dark ? " nav-avatar-dark" : ""}`} aria-label="Mr Dayter home">
           <LogoMark dark={dark} size={34} />
-        </div>
-        <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-        </div>
-        <a href="#contact" className="nav-cta">Contact</a>
+        </a>
+        <div className="nav-links">{isWhoAmI ? profileLinks : homeLinks}</div>
+        <a href={isWhoAmI ? "/documents/Wilfred_Njeunwi_Tagha_CV.pdf" : "#contact"} className="nav-cta">
+          {isWhoAmI ? "Download CV" : "Contact"}
+        </a>
       </nav>
 
-      {/* ── Mobile: small floating circle button (top-right only) ── */}
       <button
         className={`mobile-fab hamburger${menuOpen ? " active" : ""}`}
-        onClick={toggleMenu}
+        onClick={() => setMenuOpen((value) => !value)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span /><span /><span />
       </button>
 
-      {/* Mobile dropdown (anchored to top-right) */}
       {menuOpen && (
         <div className="mobile-menu-dropdown">
-          <a href="#home" onClick={closeMenu}>Home</a>
-          <a href="#services" onClick={closeMenu}>Services</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#faq" onClick={closeMenu}>FAQ</a>
-          <a href="#contact" className="mobile-cta" onClick={closeMenu}>Contact</a>
+          {isWhoAmI ? profileLinks : homeLinks}
+          <a href={isWhoAmI ? "/documents/Wilfred_Njeunwi_Tagha_CV.pdf" : "#contact"} className="mobile-cta" onClick={closeMenu}>
+            {isWhoAmI ? "Download CV" : "Contact"}
+          </a>
         </div>
       )}
     </>

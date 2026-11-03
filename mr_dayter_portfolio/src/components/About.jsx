@@ -12,7 +12,7 @@ export default function About({ dark }) {
             <h2 className="s-title">ABOUT ME</h2>
             <div className="abar"><div className="abar-1"/><div className="abar-2"/></div>
             <p className="s-desc">
-              Hi, I'm Wilfred — a software engineer from Buea, Cameroon, specialising in data engineering and analytics. I build pipelines, automate reporting, and turn raw data into decisions that actually get made. BSc Software Engineering, University of Buea.
+              I am Wilfred, a software engineer from Buea, Cameroon. My work spans data engineering, analytics and product development, but my record also includes teaching, youth leadership and community service. I care about systems that work and people who can trust them.
             </p>
 
             <div className="about-stats">
@@ -20,6 +20,8 @@ export default function About({ dark }) {
               <div><div className="stat-num">80%</div><div className="stat-lbl">Reporting Time Reduced at SYNDATECH</div></div>
               <div><div className="stat-num">5+</div><div className="stat-lbl">Systems Shipped</div></div>
             </div>
+
+            <a href="/who_am_i" className="btn-outline">READ MY FULL STORY</a>
 
             <div className="about-contacts">
               <div><div className="ct-lbl">Call Today :</div><div className="ct-val">+237 6 53 84 37 85</div></div>
