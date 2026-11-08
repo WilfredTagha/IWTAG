@@ -12,7 +12,7 @@ export default function About({ dark }) {
             <h2 className="s-title">ABOUT ME</h2>
             <div className="abar"><div className="abar-1"/><div className="abar-2"/></div>
             <p className="s-desc">
-              I am Wilfred, a software engineer from Buea, Cameroon. My work spans data engineering, analytics and product development, but my record also includes teaching, youth leadership and community service. I care about systems that work and people who can trust them.
+              I am Wilfred, a Master of Science in Information Technology student at Carnegie Mellon University Africa. My work spans software engineering, data, product development and IT support, alongside teaching, youth leadership and community service.
             </p>
 
             <div className="about-stats">

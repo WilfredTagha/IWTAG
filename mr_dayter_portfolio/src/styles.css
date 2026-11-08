@@ -1275,6 +1275,19 @@ body {
   margin: 84px 0 16px;
 }
 
+.identity-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--identity-ink);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .7px;
+  text-decoration-color: var(--ac);
+  text-underline-offset: 5px;
+}
+
 .identity-credentials {
   display: grid;
   grid-template-columns: 1fr 1fr;

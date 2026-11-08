@@ -5,8 +5,9 @@ const commitments = [
 ];
 
 const experience = [
-  { period: "2024 - Present", role: "Website Manager", organisation: "CDR Elite Writers", detail: "Researches and optimises high-volume content, manages updates and promotion, and built automated email campaigns that shortened response time." },
+  { period: "2026 - Present", role: "IT Support", organisation: "Carnegie Mellon University Africa", detail: "Supports students and university operations by troubleshooting hardware, software, accounts and day-to-day technology issues." },
   { period: "2022 - Present", role: "Data Analyst", organisation: "Mr Dayter", detail: "Supports undergraduate and postgraduate research across health, engineering, socioeconomic and political subjects." },
+  { period: "2024 - 2026", role: "Website Manager", organisation: "CDR Elite Writers", detail: "Researched and optimised high-volume content, managed updates and promotion, and built automated email campaigns that shortened response time." },
   { period: "2024", role: "Mobile Developer Intern", organisation: "Orange Cameroon", detail: "Built the software for an air-quality information system, including the mobile experience used to display sensor data." },
   { period: "2023 - 2024", role: "Software Engineer", organisation: "UWACO", detail: "Restructured and cached application code, improved performance, and added web and SMS communication for connected devices." },
   { period: "2022 - 2023", role: "Data Scientist", organisation: "SYNDATECH", detail: "Built Python reporting automation that reduced preparation time by 80% and developed interactive Tableau dashboards." },
@@ -22,6 +23,7 @@ const leadership = [
 ];
 
 const projects = [
+  { title: "MicroPowerManager WhatsApp Gateway", type: "Open source energy access", link: "https://github.com/tagha-wilfred/micropowermanager/tree/feat/whatsapp-plugin", text: "A WhatsApp Business integration for decentralized utilities, built with Laravel and Vue. It supports template notifications, customer opt-in, inbound webhooks, delivery tracking, message logs and SMS fallback." },
   { title: "CLADIAQ", type: "Air quality system", text: "A cloud-backed system for collecting, storing and displaying air-quality data with personalised recommendations. Built with AWS, Django and Flutter." },
   { title: "Fingerprint voting", type: "Final-year engineering project", text: "A biometric school voting system designed to make elections more efficient and strengthen voter verification." },
   { title: "Crop illness detection", type: "Machine learning", text: "A crop-disease detection model paired with a mobile simulation to explore practical monitoring for healthier yields." },
@@ -29,6 +31,7 @@ const projects = [
 ];
 
 const credentials = [
+  "MS Information Technology, Carnegie Mellon University Africa | In progress",
   "BEng Software Engineering, University of Buea",
   "Programming for Data Science, Udacity",
   "Duke of Edinburgh International Award, Silver",
@@ -44,9 +47,9 @@ export default function WhoAmI() {
       <section className="identity-hero" id="top">
         <div className="identity-hero-copy">
           <div className="identity-kicker">WHO_AM_I / WILFRED NJEUNWI TAGHA</div>
-          <p className="identity-campaign-label">Engineer / Analyst / Educator / Community Leader</p>
+          <p className="identity-campaign-label">Graduate Student / Engineer / Analyst / Community Leader</p>
           <h1>The work behind<br />the name.</h1>
-          <p className="identity-lede">I am a software engineer, data analyst, educator and community leader. This page brings together the work I have done, the people I have served and the principles that guide how I take responsibility.</p>
+          <p className="identity-lede">I am a Master of Science in Information Technology student at Carnegie Mellon University Africa, as well as a software engineer, data analyst and community leader. This page brings together the systems I have built, the people I have served and the principles that guide my work.</p>
           <div className="identity-actions">
             <a className="identity-primary" href="/documents/Wilfred_Njeunwi_Tagha_CV.pdf" download>Download my CV <span aria-hidden="true">&#8595;</span></a>
             <a className="identity-secondary" href="#record">Explore my record</a>
@@ -56,7 +59,7 @@ export default function WhoAmI() {
         <div className="identity-portrait-wrap">
           <div className="identity-portrait-index" aria-hidden="true">01</div>
           <img src="/images/profile.jpg" alt="Wilfred Njeunwi Tagha" className="identity-portrait" />
-          <div className="identity-portrait-caption"><span>Buea, Cameroon</span><span>Engineer / Leader</span></div>
+          <div className="identity-portrait-caption"><span>Kigali, Rwanda</span><span>CMU Africa / Engineer</span></div>
         </div>
       </section>
 
@@ -106,7 +109,7 @@ export default function WhoAmI() {
       <section className="identity-section">
         <div className="identity-section-head"><div className="identity-section-label">SELECTED PROJECTS</div><h2>Ideas made<br />concrete.</h2></div>
         <div className="identity-project-grid">
-          {projects.map((project, index) => <article className="identity-project" key={project.title}><div className="identity-project-top"><span>0{index + 1}</span><span>{project.type}</span></div><h3>{project.title}</h3><p>{project.text}</p></article>)}
+          {projects.map((project, index) => <article className="identity-project" key={project.title}><div className="identity-project-top"><span>0{index + 1}</span><span>{project.type}</span></div><h3>{project.title}</h3><p>{project.text}</p>{project.link && <a className="identity-project-link" href={project.link} target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>}</article>)}
         </div>
       </section>
 

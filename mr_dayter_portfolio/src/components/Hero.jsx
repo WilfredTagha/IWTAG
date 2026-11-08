@@ -39,7 +39,7 @@ export default function Hero({ dark }) {
         <div className="hero-right">
           <div className="hero-title">ENGINEER</div>
           <div className="hero-desc">
-            I build data systems, software and reporting workflows that help people make better decisions. I also lead, teach and serve in the communities around me.
+            I am an Information Technology graduate student at Carnegie Mellon University Africa. I build data systems, software and reporting workflows that help people make better decisions.
           </div>
           <div className="hero-actions">
             <a href="#services" className="hero-link primary">View my work</a>

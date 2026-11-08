@@ -26,7 +26,7 @@ export default function App() {
 
     const description = isManifesto
       ? "Wilfred Njeunwi Tagha's manifesto for an accountable, independent and accessible Office of the Auditor General at CMU Africa."
-      : "Wilfred Njeunwi Tagha is a software engineer, data analyst and community leader who builds practical systems and serves people.";
+      : "Wilfred Njeunwi Tagha is an Information Technology graduate student at Carnegie Mellon University Africa who builds practical software and data systems.";
     document.querySelector('meta[name="description"]')?.setAttribute("content", description);
   }, [isWhoAmI, isManifesto]);
 
