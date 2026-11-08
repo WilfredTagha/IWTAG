@@ -11,6 +11,7 @@ export default function Navbar({ dark, isWhoAmI = false }) {
       <a href="#about" onClick={closeMenu}>About</a>
       <a href="#testimonials" onClick={closeMenu}>Work</a>
       <a href="/who_am_i" onClick={closeMenu}>Who am I</a>
+      <a href="/manifesto" onClick={closeMenu}>Manifesto</a>
     </>
   );
 
@@ -20,6 +21,7 @@ export default function Navbar({ dark, isWhoAmI = false }) {
       <a href="#principles" onClick={closeMenu}>Principles</a>
       <a href="#record" onClick={closeMenu}>The record</a>
       <a href="#experience" onClick={closeMenu}>Experience</a>
+      <a href="/manifesto" onClick={closeMenu}>Manifesto</a>
     </>
   );
 
