@@ -8,34 +8,26 @@ import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhoAmI from "./components/WhoAmI";
-import Manifesto from "./components/Manifesto";
 import "./styles.css";
 
 export default function App() {
   const [dark, setDark] = useState(true);
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   const isWhoAmI = path === "/who_am_i" || path === "/who-am-i";
-  const isManifesto = path === "/manifesto" || path === "/auditor-general";
 
   useEffect(() => {
-    document.title = isManifesto
-      ? "Manifesto for Auditor General | Wilfred Njeunwi Tagha"
-      : isWhoAmI
-        ? "Who I Am | Wilfred Njeunwi Tagha"
-        : "Mr. Dayter | Data Engineer, Builder and Community Leader";
+    document.title = isWhoAmI
+      ? "Who I Am | Wilfred Njeunwi Tagha"
+      : "Mr. Dayter | Data Engineer, Builder and Community Leader";
 
-    const description = isManifesto
-      ? "Wilfred Njeunwi Tagha's manifesto for an accountable, independent and accessible Office of the Auditor General at CMU Africa."
-      : "Wilfred Njeunwi Tagha is an Information Technology graduate student at Carnegie Mellon University Africa who builds practical software and data systems.";
+    const description = "Wilfred Njeunwi Tagha is an Information Technology graduate student at Carnegie Mellon University Africa who builds practical software and data systems.";
     document.querySelector('meta[name="description"]')?.setAttribute("content", description);
-  }, [isWhoAmI, isManifesto]);
+  }, [isWhoAmI]);
 
   return (
-    <div className={`app${dark && !isManifesto ? " dark" : ""}${isManifesto ? " manifesto-app" : ""}`}>
-      {!isManifesto && <Navbar dark={dark} isWhoAmI={isWhoAmI} />}
-      {isManifesto ? (
-        <Manifesto />
-      ) : isWhoAmI ? (
+    <div className={`app${dark ? " dark" : ""}`}>
+      <Navbar dark={dark} isWhoAmI={isWhoAmI} />
+      {isWhoAmI ? (
         <WhoAmI />
       ) : (
         <main>
@@ -47,18 +39,16 @@ export default function App() {
           <Contact dark={dark} />
         </main>
       )}
-      {!isManifesto && <Footer dark={dark} />}
-      {!isManifesto && (
-        <div className="float-toggle">
-          <button
-            className={`tog-pill${dark ? " on" : ""}`}
-            onClick={() => setDark((value) => !value)}
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            <div className="tog-knob" />
-          </button>
-        </div>
-      )}
+      <Footer dark={dark} />
+      <div className="float-toggle">
+        <button
+          className={`tog-pill${dark ? " on" : ""}`}
+          onClick={() => setDark((value) => !value)}
+          aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          <div className="tog-knob" />
+        </button>
+      </div>
     </div>
   );
 }

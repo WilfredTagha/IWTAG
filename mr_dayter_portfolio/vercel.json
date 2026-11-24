@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/manifesto", "destination": "/", "permanent": true },
+    { "source": "/auditor-general", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
